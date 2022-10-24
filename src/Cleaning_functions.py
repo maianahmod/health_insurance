@@ -33,7 +33,7 @@ def correct_Annual_Premium(dataframe):
     """
     
     dataframe['log_premium'] = np.log(dataframe['Annual_Premium'])
-    data_mask = dataframe['log_premium'] > dataframe['log_premium'].median()
+    data_mask = dataframe['log_premium'] > dataframe['log_premium'].mean()
     dataframe = dataframe[data_mask]
     
     
